@@ -1,0 +1,26 @@
+
+.quiz-bubble-fade {
+  opacity: 0;
+  transform: translateY(32px);
+  transition-property: opacity, transform;
+}
+.opacity-100 {
+  opacity: 1 !important;
+}
+.opacity-0 {
+  opacity: 0 !important;
+}
+.translate-y-0 {
+  transform: translateY(0) !important;
+}
+.translate-y-8 {
+  transform: translateY(32px) !important;
+}
+
+@keyframes quiz-bar-fill {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.animate-quiz-bar-fill {
+  animation: quiz-bar-fill 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
