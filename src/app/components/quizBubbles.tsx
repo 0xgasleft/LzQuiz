@@ -299,27 +299,6 @@ const QuizBubbles: React.FC = () => {
     >
       “Darkness vanquished — your legend ignites!”
     </span>
-    <style>
-      {`
-        @keyframes epic-phrase {
-          0% {
-            opacity: 0;
-            transform: scale(0.85) translateY(40px);
-          }
-          60% {
-            opacity: 1;
-            transform: scale(1.05) translateY(-8px);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
-        }
-        .animate-epic-phrase {
-          animation: epic-phrase 1.2s cubic-bezier(.22,1,.36,1) both;
-        }
-      `}
-    </style>
   </div>
 )}
         </div>

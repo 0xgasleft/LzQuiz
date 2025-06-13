@@ -2,6 +2,7 @@
 
 import { ConnectBtn } from "@/app/components/connectButton";
 import QuizBubbles from "@/app/components/quizBubbles";
+import { Analytics } from "@vercel/analytics/react";
 
 import React, { useEffect, useState } from "react";
 
@@ -46,6 +47,7 @@ export default function Home() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <QuizBubbles />
       </div>
+      <Analytics/>
     </main>
   );
 }

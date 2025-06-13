@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
-import {LEVEL} from '@/lib/utils';
+import {LEVEL, shuffleArray} from '@/lib/utils';
+
+// ADD SHUFFLE LOGIC IN THE BACKEND FOR QUESTIONS AND ANSWERS
 
 
 const quiz = [
@@ -154,49 +156,7 @@ const quiz = [
   }
 ];
 
-
-
-const _quiz = [
-  {
-    id: 1,
-    question: "What is LayerZero primarily designed for?",
-    answers: [
-      "Hosting non‑fungible tokens",
-      "Omnichain interoperability between blockchains",
-      "Layer‑2 scaling only",
-      "On‑chain gaming"
-    ],
-    correct: 1,
-    difficulty: LEVEL.EASY
-  },
-  {
-    id: 2,
-    question: "Which of the following is an immutable contract deployed on each chain to serve as entry and exit points?",
-    answers: [
-      "Message Library",
-      "Endpoint",
-      "Oracle",
-      "Relayer"
-    ],
-    correct: 1,
-    difficulty: LEVEL.EASY
-  },
-  {
-    id: 3,
-    question: "LayerZero V2 replaced oracles and relayers with which two components?",
-    answers: [
-      "Oracles and Executors",
-      "DVNs (Decentralized Verifier Networks) and Executors",
-      "Oracles and DVNs",
-      "Relayers and Executors"
-    ],
-    correct: 1,
-    difficulty: LEVEL.EASY
-  },
-  
-];
-
-const rand = [
+[
 {
     id: 4,
     question: "What does 'X of Y of N' refer to in LayerZero’s security model?",
@@ -283,5 +243,5 @@ const rand = [
   }
 ]
 export async function GET() {
-  return NextResponse.json(quiz);
+  return NextResponse.json(shuffleArray(quiz));
 }
